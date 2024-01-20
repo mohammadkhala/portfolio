@@ -1,0 +1,129 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  :root {
+    --main-color:  #008AAA;
+    --main-color-alt: #3BBADB;
+    --secondary-color:#D1884F ;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+.list{
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: end;
+
+}
+.list .list-item{
+    margin-right: 15px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.list .list-item .title{
+    padding-left: 10px;
+    display: inline-block;
+
+}
+@media(max-width:767px){
+    .list .list-item .title{
+        display: none;
+    }
+    .list{
+        justify-content: center;
+        gap: 20px;
+    }
+}
+.active, .list .list-item:hover{
+    color: var(--secondary-color);
+}
+.main{
+    padding: 30px;
+}
+.text {
+    max-width: 420px;
+    
+}
+.main-head{
+    color: var(--main-color-alt);
+    margin-bottom: 30px;
+}
+.main h1{
+    color: var(--main-color);
+}
+.main .see-more{
+    color: var(--main-color-alt)
+}
+.main .content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.main .image-box{
+    max-width: 400px;
+    height: 300px;
+    position: relative;
+    margin-right: 35px;
+}
+.main .image-box::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: var(--main-color-alt);
+    transform: rotate(-3deg) translatex(-10px);
+    border-bottom-left-radius: 140px;
+    border-top-right-radius: 140px;
+    z-index: -1;
+}
+.main .image-box img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 140px;
+}
+.btn-container{
+    margin-bottom: 30px;
+}
+.colored{
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    box-shadow: 0 10px 10px var(--main-color-alt);
+    border-radius:3px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.white{
+    background-color: white;
+    color: var(--main-color);
+    border-radius: 3px;
+    padding: 5px 10px;
+    border: none;
+    border: 1px solid var(--main-color);
+    margin-left: 10px;
+    cursor: pointer;
+}
